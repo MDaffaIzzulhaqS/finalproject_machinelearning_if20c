@@ -10,9 +10,9 @@ def main():
 def about():
     return render_template('about.html')
 
-# @app.route("/predict")
-# def about():
-#     return render_template('predict.html')
+@app.route("/predict")
+def predict():
+   return render_template('predict.html')
 
 if __name__ == "__main__":
     app.run()
