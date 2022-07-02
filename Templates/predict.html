@@ -39,58 +39,94 @@
     <div class="container mt-3 mb-3">
         <main class="px-3">
             <form action="" class="">
-                <table class="d-grid gap-2 col-2 mx-auto">
-                <tr>
-                    <td> Battery Power </td>
-                    <td> <input type="number" size="5"></td>
-                </tr>
 
-                <tr>
-                    <td> Bluetooth </td>
-                    <td> <input type="number" ></td>
-                </tr>
-                
-                <tr>
-                    <td> Clock Speed </td>
-                    <td> <input type="number" ></td>
-                </tr>
-
-                <tr>
-                    <td> Dual SIM </td>
-                    <td> <input type="number" ></td>
-                </tr>
-
-                <tr>
-                    <td> PX Height </td>
-                    <td> <input type="number" ></td>
+                <div class="row mb-3 justify-content-center">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Battery Power</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control " id="inputEmail3">
                     </div>
-                </tr>
+                  </div>
 
-                <tr>
-                    <td> PX Width </td>
-                    <td> <input type="number" ></td>
-                </tr>
+                  <div class="row mb-3 justify-content-center">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label"> Bluetooth</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" id="inputEmail3">
+                    </div>
+                  </div>
 
-                <tr>
-                    <td> RAM </td>
-                    <td> <input type="number" ></td>
-                </tr>
-
-                <tr>
-                    <td> Price Range </td>
-                    <td> <input type="number" ></td>
-                </tr>
+                  <div class="row mb-3 justify-content-center">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label"> Clock Speed</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" id="inputEmail3">
+                    </div>
+                  </div>
                 
-            </table>
+                  <div class="row mb-3 justify-content-center">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label"> Dual SIM</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" id="inputEmail3">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3 justify-content-center">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label"> PX Height</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" id="inputEmail3">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3 justify-content-center">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label"> PX Width</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" id="inputEmail3">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3 justify-content-center">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label"> RAM</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" id="inputEmail3">
+                    </div>
+                  </div>
+
+                  <div class="row mb-3 justify-content-center">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">  Price Range</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" id="inputEmail3">
+                    </div>
+                  </div>
+
+
+             <div class="mb-2 d-grid gap-2 col-2 mx-auto">
+             <!-- Button submit -->
+             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>   
+             </div>
 
             <div class="d-grid gap-2 col-2 mx-auto">
-            <input class="btn btn-primary" type="submit" value="Submit">    
             <input class="btn btn-primary" type="reset" value="Reset">
             </div>
-        
             </form>
         </main>
     </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Hasil Prediksi</h5>
+          <!--tanda silang-->
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <div class="modal-body">
+          Harga HP Samsung : Rp.10.000.000
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
