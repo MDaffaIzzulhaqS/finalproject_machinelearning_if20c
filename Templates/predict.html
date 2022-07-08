@@ -41,63 +41,63 @@
             <form action="" class="">
 
                 <div class="row mb-3 justify-content-center">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Battery Power</label>
+                    <label for="battery_power" class="col-sm-2 col-form-label"> Battery Power </label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control " id="inputEmail3">
+                      <input type="text" class="form-control " id="battery_power" name="battery_power" required>
                     </div>
                   </div>
 
                   <div class="row mb-3 justify-content-center">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label"> Bluetooth</label>
+                    <label for="bluetooth" class="col-sm-2 col-form-label"> Bluetooth </label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" id="inputEmail3">
+                      <input type="text" class="form-control" id="bluetooth" name="bluetooth" required>
                     </div>
                   </div>
 
                   <div class="row mb-3 justify-content-center">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label"> Clock Speed</label>
+                    <label for="clock_speed" class="col-sm-2 col-form-label"> Clock Speed </label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" id="inputEmail3">
+                      <input type="text" class="form-control" id="clock_speed" name="clock_speed" required>
                     </div>
                   </div>
                 
                   <div class="row mb-3 justify-content-center">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label"> Dual SIM</label>
+                    <label for="dual_sim" class="col-sm-2 col-form-label"> Dual SIM </label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" id="inputEmail3">
+                      <input type="text" class="form-control" id="dual_sim" name="dual_sim" required>
                     </div>
                   </div>
 
                   <div class="row mb-3 justify-content-center">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label"> PX Height</label>
+                    <label for="px_height" class="col-sm-2 col-form-label"> PX Height </label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" id="inputEmail3">
+                      <input type="text" class="form-control" id="px_height" name="px_height" required>
                     </div>
                   </div>
 
                   <div class="row mb-3 justify-content-center">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label"> PX Width</label>
+                    <label for="px_width" class="col-sm-2 col-form-label"> PX Width </label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" id="inputEmail3">
+                      <input type="text" class="form-control" id="px_width" name="px_width" required>
                     </div>
                   </div>
 
                   <div class="row mb-3 justify-content-center">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label"> RAM</label>
+                    <label for="ram" class="col-sm-2 col-form-label"> RAM </label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" id="inputEmail3">
+                      <input type="text" class="form-control" id="ram" name="ram" required>
                     </div>
                   </div>
 
                   <div class="row mb-3 justify-content-center">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">  Price Range</label>
+                    <label for="price_range" class="col-sm-2 col-form-label"> Price Range </label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" id="inputEmail3">
+                      <input type="text" class="form-control" id="price_range" name="price_range" required>
                     </div>
                   </div>
 
             <div class="d-grid gap-2 d-md-flex justify-content-md-center my-5">
-                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+                <button type="submit" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
                 <input class="btn btn-primary btn-lg" type="reset" value="Reset">
             </div>
             </form>
@@ -105,23 +105,33 @@
     </div>
 
     <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Hasil Prediksi</h5>
-          <!--tanda silang-->
-          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-        </div>
-        <div class="modal-body">
-          Harga HP : Rp.8.900.000
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Hasil Prediksi</h5>
+            <!--tanda silang-->
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+            {% if prediction_text == 'Harga Diprediksi Naik ' %}
+            <div class="alert alert-danger">
+              <h1>{{ prediction_text }}</h1>
+              <hr class="my-1">
+            </div>
+            {% else %}
+            <div class="alert alert-success">
+              <h1>{{ prediction_text }}</h1>
+              <hr class="my-1">
+            </div>
+            {% endif %}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
